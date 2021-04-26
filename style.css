@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+body{
+    background-color: black;
+    background: linear-gradient(to right, #348F50 ,#56B4D3);
+}
+.main-clock-container{
+    position: relative;
+    width: 520px;
+    height: 520px;
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: 1px 2px 5px rgb(0, 0, 0);
+    border: 6px double #67c282;
+    border-radius: 50%;
+    /* background-image: url('image.jpg'); */
+    /* background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+    background: linear-gradient(to right, rgb(235, 233, 233) , rgb(240, 233, 189));
+    animation-name: Animation;
+    animation-duration: 1s;
+  
+    
+}
+@keyframes Animation{
+    from {
+      transform: translateY(-600px);
+    }
+    to {
+      transform: translateY();
+    }
+  }
+.time-12,.time-3,.time-6,.time-9{
+    position: absolute;
+    color: #67c282;
+    font-size: 65px;
+}
+.time-12{
+    top:5%;
+    left: 43%;
+}
+.time-3{
+    right:5%;
+    top: 42%;
+}
+.time-6{
+    bottom:5%;
+    left: 46%;
+}
+.time-9{
+    top:43%;
+    left: 5%;
+}
+
+ .clock-center{
+    position: absolute;
+    bottom: 49%;
+    left: 49%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(37, 85, 77);
+    z-index: 100;
+    box-shadow: 1px 2px 5px rgb(17, 17, 17);
+    animation-name: example;
+    animation-duration: 2s;
+}
+
+.hours, .minutes, .seconds,.m_seconds{
+    position: absolute;
+    bottom: 50%;
+    transform-origin: bottom;
+    border-radius: 35%;
+
+}
+.hours{
+    width: 8px;
+    height: 25%;
+    background-color: rgb(25, 70, 87);
+    left: 49.5%;
+}
+.minutes{
+    width: 8px;
+    height: 36%;
+    background-color: rgb(25, 70, 87);
+    left: 49.5%;
+}
+.seconds,.m_seconds{
+    width: 3px;
+    height: 38%;
+    background-color: rgb(85, 20, 20);
+    left: 50%;
+
+}
+.m_seconds{
+    background-color: rgba(85, 20, 20,0.4);
+    width: 2px;
+}
+/* Digital clock */
+.digital-clock{
+    position: relative;
+    width: 380px;
+    height: auto;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 35px;
+    color: white;
+}
+
+.digital-clock h4{
+    width: 70px;
+    text-align: center;
+    background-color: #67c282;
+    opacity: 0.8;
+    animation-name: Animation2;
+    animation-duration: 2s;
+    
+}
+@keyframes Animation2{
+    from {
+      background-color: transparent;
+    }
+    to {
+        background-color: #67c282;
+    }
+  }
+@media only screen and (max-width: 710px) {
+    .main-clock-container{
+        width: 350px;
+        height: 350px;
+    }
+    .time-12,.time-3,.time-9,.time-6{
+        font-size: 40px;
+    }
+    .clock-center{
+        bottom: 48%;
+        left: 48%;
+   
+    }
+  }
+  @media only screen and (max-width: 580px) {
+    .digital-clock{
+        width: 270px;
+        padding: 16px;
+        font-size: 18px;
+    }
+    .digital-clock h4{
+        width: 45px;
+    }
+    .time-12,.time-3,.time-6,.time-9{
+        font-size: 35px;
+    }
+
+  }
+
+  @media only screen and (max-width: 350px) {
+    .main-clock-container{
+        margin-top: 50px;
+        width: 250px;
+        height: 250px;
+    }
+    .time-12,.time-3,.time-9,.time-6{
+        font-size: 20px;
+    }
+    .hours{
+        width: 5px;
+        left: 49.5%;
+    }
+    .minutes{
+        width: 5px;
+        left: 49.5%;
+    }
+    .seconds,.m_seconds{
+        left: 50%;
+    
+    }
+    .clock-center{
+        bottom: 48%;
+        left: 48%;
+        width: 12px;
+        height: 12px;
+   
+    }
+  }
