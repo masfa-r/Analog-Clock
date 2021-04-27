@@ -42,7 +42,7 @@ function currentTime(){
         msec.innerHTML = `0${c_msec}`;
     }
         
-    hourDeg = c_hour * 360 / 12;
+    hourDeg = c_hour * 360 / 60;
     secDeg = c_sec * 6 ;
     minDeg = c_min * 6;
     msecDeg = c_msec * 360 /1000;
