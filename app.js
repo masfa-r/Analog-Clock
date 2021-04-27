@@ -12,7 +12,6 @@ const tickingSound = document.querySelector('#ticking-sound')
 // hour.style.transform = 'rotate(90deg)';
 // min.style.transform = 'rotate(6deg)';
 
-
 function currentTime(){
     let date = new Date();
     let c_hour, c_min, c_sec, c_msec, dmsec;
@@ -42,7 +41,7 @@ function currentTime(){
         msec.innerHTML = `0${c_msec}`;
     }
         
-    hourDeg = c_hour * 360 / 60;
+    hourDeg = c_hour * 30 + c_min/2;
     secDeg = c_sec * 6 ;
     minDeg = c_min * 6;
     msecDeg = c_msec * 360 /1000;
